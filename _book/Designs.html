@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Final Words | A Minimal Book Example</title>
+  <title>Chapter 4 Methods | A Minimal Book Example</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Final Words | A Minimal Book Example" />
+  <meta property="og:title" content="Chapter 4 Methods | A Minimal Book Example" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Final Words | A Minimal Book Example" />
+  <meta name="twitter:title" content="Chapter 4 Methods | A Minimal Book Example" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="applications.html"/>
-<link rel="next" href="references.html"/>
+<link rel="prev" href="literature.html"/>
+<link rel="next" href="applications.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -165,18 +165,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="final-words" class="section level1">
-<h1><span class="header-section-number">Chapter 6</span> Final Words</h1>
-<p>We have finished a nice book.</p>
+<div id="Designs" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Methods</h1>
+<p>We describe our methods in this chapter.</p>
+<div id="t-test" class="section level2">
+<h2><span class="header-section-number">4.1</span> T-test</h2>
+<p>Let’s try to do a one way T-test:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="Designs.html#cb10-1"></a><span class="co">#Calculations</span></span>
+<span id="cb10-2"><a href="Designs.html#cb10-2"></a></span>
+<span id="cb10-3"><a href="Designs.html#cb10-3"></a>my_data &lt;-<span class="st"> </span>lincoln_weather</span>
+<span id="cb10-4"><a href="Designs.html#cb10-4"></a></span>
+<span id="cb10-5"><a href="Designs.html#cb10-5"></a>result.t.test &lt;-<span class="st"> </span><span class="kw">t.test</span>(my_data<span class="op">$</span><span class="st">`</span><span class="dt">Mean Temperature [F]</span><span class="st">`</span>, my_data<span class="op">$</span><span class="st">`</span><span class="dt">Mean Humidity</span><span class="st">`</span>, <span class="dt">paired =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb10-6"><a href="Designs.html#cb10-6"></a></span>
+<span id="cb10-7"><a href="Designs.html#cb10-7"></a>result.t.test</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  my_data$`Mean Temperature [F]` and my_data$`Mean Humidity`
+## t = -12.865, df = 596.67, p-value &lt; 2.2e-16
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -17.09557 -12.56744
+## sample estimates:
+## mean of x mean of y 
+##  51.50000  66.33151</code></pre>
+<p>We can conclude that there is in fact a relationship between the mean temperature and the mean humidity in Lincoln, Nebraska <em>p</em> &lt; 0.01.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="applications.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="literature.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="applications.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
